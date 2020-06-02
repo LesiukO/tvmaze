@@ -1,0 +1,99 @@
+.main-page {
+  border: 1px solid red;
+  min-height: 100px;
+
+  display: flex;
+  justify-content: space-between;
+
+  padding: 40px 0;
+
+  &__content {
+    border: 1px solid red;
+    width: 62%;
+  }
+
+  &__schedule {
+    border: 1px solid red;
+    width: 35%;
+  }
+
+}
+
+.popular {
+
+  &__cards {
+    display: flex;
+    justify-content: space-between;
+
+    margin: 20px 0;
+  }
+
+  &__card {
+    width: 19.8%;
+  }
+}
+
+.card {
+  background-color: #1f4b47;
+  border-bottom: 3px solid #3C948B;
+  color: #fff;
+
+  &__info {
+    padding: 15px;
+  }
+
+  &__title {
+    font-size: 15px;
+    font-weight: bold;
+  }
+}
+
+.schedule-on-hour {
+
+}
+
+.hour {
+  padding: 15px 10px;
+  background-color: #3F3F3F;
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.chanels {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.chanel {
+  display: flex;
+  padding: 15px 10px;
+
+  color: #3C948B;
+
+  &__left {
+    width: 20%;
+    border: 1px solid red;
+  }
+
+  &__time {
+    color: #000;
+  }
+
+  &__name {
+    cursor: pointer;
+  }
+
+  &__title {
+    font-size: 20px;
+    cursor: pointer;
+  }
+
+  &:nth-child(odd) {
+    background-color: #f1f1f1;
+  }
+}
+
+

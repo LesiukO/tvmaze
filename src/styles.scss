@@ -1,1 +1,29 @@
 /* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body {
+  margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif;
+  background-color: #fefefe;
+ }
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.title {
+  color: #3F3F3F;
+  font-size: 30px;
+}
+
+img {
+  max-width: 100%;
+}
+
+.btn-more {
+  display: inline-block;
+  color: #3C948B;
+  border: 1px solid #3C948B;
+  padding: 10px;
+  border-radius: 18px;
+}

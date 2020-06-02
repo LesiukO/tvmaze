@@ -1,0 +1,41 @@
+.search {
+  display: flex;
+
+  width: 700px;
+
+  &__input {
+    display: inline-block;
+    width: 80%;
+    height: 30px;
+    padding: 10px 15px;
+
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+
+    border: none;
+
+    outline: 0;
+  }
+
+  &__button {
+    display: inline-block;
+    height: 30px;
+    padding: 10px 15px;
+    width: 20%;
+
+    background-color: #3C948B;
+
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+
+    text-align: center;
+    vertical-align: middle;
+
+    cursor: pointer;
+  }
+
+  &__icon {
+    color: #fff;
+    font-size: 30px;
+  }
+}
