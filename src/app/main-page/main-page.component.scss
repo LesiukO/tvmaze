@@ -1,5 +1,4 @@
 .main-page {
-  border: 1px solid red;
   min-height: 100px;
 
   display: flex;
@@ -8,12 +7,10 @@
   padding: 40px 0;
 
   &__content {
-    border: 1px solid red;
     width: 62%;
   }
 
   &__schedule {
-    border: 1px solid red;
     width: 35%;
   }
 
@@ -75,7 +72,6 @@
 
   &__left {
     width: 20%;
-    border: 1px solid red;
   }
 
   &__time {
