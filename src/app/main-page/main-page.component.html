@@ -5,58 +5,12 @@
         <h2 class="popular__title title">Popular shows airing tonight</h2>
         <div class="popular__cards">
 
-          <!-- <div class="popular__card card">
-            <div class="card__img">
-              <img src="https://static.tvmaze.com/uploads/images/medium_portrait/236/590381.jpg" alt="show img">
-            </div>
-            <div class="card__info">
-              <p class="card__title">The Genetic Detective</p>
-              <p class="card__description">Hunt for the Runway Killer</p>
-            </div>
-          </div>
-          <div class="popular__card card">
-            <div class="card__img">
-              <img src="https://static.tvmaze.com/uploads/images/medium_portrait/236/590381.jpg" alt="show img">
-            </div>
-            <div class="card__info">
-              <p class="card__title">The Genetic Detective</p>
-              <p class="card__description">Hunt for the Runway Killer</p>
-            </div>
-          </div>
-          <div class="popular__card card">
-            <div class="card__img">
-              <img src="https://static.tvmaze.com/uploads/images/medium_portrait/236/590381.jpg" alt="show img">
-            </div>
-            <div class="card__info">
-              <p class="card__title">The Genetic Detective</p>
-              <p class="card__description">Hunt for the Runway Killer</p>
-            </div>
-          </div>
-          <div class="popular__card card">
-            <div class="card__img">
-              <img src="https://static.tvmaze.com/uploads/images/medium_portrait/236/590381.jpg" alt="show img">
-            </div>
-            <div class="card__info">
-              <p class="card__title">The Genetic Detective</p>
-              <p class="card__description">Hunt for the Runway Killer</p>
-            </div>
-          </div>
-          <div class="popular__card card">
-            <div class="card__img">
-              <img src="https://static.tvmaze.com/uploads/images/medium_portrait/236/590381.jpg" alt="show img">
-            </div>
-            <div class="card__info">
-              <p class="card__title">The Genetic Detective</p>
-              <p class="card__description">Hunt for the Runway Killer</p>
-            </div>
-          </div> -->
-
           <div class="popular__card card" *ngFor="let show of shows$ | slice:0:5; let i=index">
             <div class="card__img">
               <img src="{{ show.image.medium }}" alt="show img">
-            </div>
+          </div>
             <div class="card__info">
-              <p class="card__title">{{ show.name }}</p>
+              <a routerLink="/show/{{ show.externals.tvrage }}" class="card__title">{{ show.name }}</a>
               <p class="card__description">{{ show.genres[0] }}</p>
             </div>
           </div>

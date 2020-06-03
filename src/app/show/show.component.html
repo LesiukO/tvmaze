@@ -1,0 +1,26 @@
+<div class="container">
+
+  <div *ngIf="show">
+    <h2 class="title show-title">{{ show.name }}</h2>
+
+    <div class="show">
+      <mat-card class="show__description">
+        <img src="{{ show.image.medium }}" alt="show-img" class="show__img">
+        <p class="show__summary" [innerHTML]="show.summary"></p>
+      </mat-card>
+
+      <mat-card class="show__info">
+        <p class="show__schedule"><strong>Schedule:</strong> {{ show.schedule.days[0] }} at {{show.schedule.time}}</p>
+        <p class="show__status"><strong>Status:</strong> {{ show.status }}</p>
+        <p class="show__type"><strong>Show Type:</strong> {{ show.type }}</p>
+        <p class="show__genres"><strong>Genres:</strong>
+          <span *ngFor="let genre of show.genres"> {{ genre }} |</span>
+        </p>
+        <p class="show__site"><strong>Official site: <br></strong>
+          <a href="{{ show.officialSite }}">{{ show.officialSite }}</a>
+        </p>
+      </mat-card>
+    </div>
+  </div>
+
+</div>
