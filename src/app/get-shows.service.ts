@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class GetShowsService {
 
-  baseUrl = 'http://api.tvmaze.com';
+  baseUrl = 'https://api.tvmaze.com';
 
   constructor(private http: HttpClient) { }
 
