@@ -13,7 +13,10 @@
   &__schedule {
     width: 35%;
   }
+}
 
+.schedules {
+  // width: 35%;
 }
 
 .popular {
@@ -80,6 +83,11 @@
     width: 20%;
   }
 
+  &__right {
+    margin-left: 10px;
+    width: 70%;
+  }
+
   &__time {
     color: #000;
   }
@@ -89,7 +97,7 @@
   }
 
   &__title {
-    font-size: 20px;
+    font-size: 16px;
     cursor: pointer;
   }
 

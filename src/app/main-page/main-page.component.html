@@ -1,6 +1,7 @@
 <div class="container">
   <div class="main-page">
     <div class="main-page__content">
+
       <div class="popular">
         <h2 class="popular__title title">Popular shows airing tonight</h2>
         <div class="popular__cards">
@@ -18,26 +19,46 @@
         </div>
         <a class="btn-more">More shows >></a>
       </div>
+
+      <div class="popular" *ngIf="lastViewed[0]">
+        <h2 class="popular__title title">Last viewed shows</h2>
+        <div class="popular__cards">
+
+          <div class="popular__card card" *ngFor="let show of lastViewed | slice:0:5; let i=index">
+            <div class="card__img">
+              <img src="{{ show.image.medium }}" alt="show img">
+          </div>
+            <div class="card__info">
+              <a routerLink="/show/{{ show.externals.tvrage }}" class="card__title">{{ show.name }}</a>
+              <p class="card__description">{{ show.genres[0] }}</p>
+            </div>
+          </div>
+
+        </div>
+        <a class="btn-more">More shows >></a>
+      </div>
+
     </div>
 
-    <div class="main-page__schedule schedule">
-      <h2 class="title">Schedule for Jun 02</h2>
+    <div class="main-page__schedule schedule" >
+      <h2 class="title">Schedule for {{ currentDate | date:'mediumDate' }}</h2>
       <div class="schedule-on-hour">
-        <p class="hour">20:00</p>
+        <!-- <p class="hour">20:00</p> -->
         <ul class="chanels">
-          <li class="chanel">
+          <li class="chanel" *ngFor="let item of schedule$ | slice:0:15">
             <div class="chanel__left">
-              <div class="chanel__time">20:00</div>
-              <div class="chanel__name">Disney</div>
+              <div class="chanel__time">{{ item.airtime }}</div>
+              <div class="chanel__name">{{ item.show.genres[0] }}</div>
             </div>
             <div class="chanel__right">
-              <a class="chanel__title">Coop & Cami Ask the World</a>
+              <a class="chanel__title">{{ item.name }}</a>
             </div>
           </li>
-          <li class="chanel">2</li>
-          <li class="chanel">2</li>
+          <!-- <li class="chanel">2</li>
+          <li class="chanel">2</li> -->
         </ul>
       </div>
     </div>
+
   </div>
 </div>

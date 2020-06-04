@@ -10,6 +10,9 @@ import { TvmazeApiService } from '../tvmaze-api.service';
 export class ShowComponent implements OnInit {
 
   show;
+  lastViewed;
+
+
 
   constructor(
     private tvmazeApiService: TvmazeApiService,
@@ -20,17 +23,33 @@ export class ShowComponent implements OnInit {
     this.route.params.subscribe((params: Params) => {
       this.tvmazeApiService.getShowByTvrage(params.tvrage).subscribe( (show) => {
         this.show = show;
-        console.log(this.show);
 
+        // save to local storage
+        this.saveShowToLastViewed(show);
       });
     });
+
+    this.getLastViewed();
   }
 
-  getShow(tvrage) {
-    this.tvmazeApiService.getShowByTvrage(tvrage).subscribe( (show) => {
-      this.show = show;
-      console.log(this.show);
+  getLastViewed() {
+    if (localStorage.getItem('lastViewed') === null) {
+      this.lastViewed = [];
+    } else {
+      this.lastViewed = JSON.parse(localStorage.getItem('lastViewed'))
+    }
+  }
+
+  saveShowToLastViewed(show) {
+    this.lastViewed.forEach( (currentShow, index) => {
+      if (currentShow.id === show.id) {
+        this.lastViewed.splice(index, 1)
+      }
     });
+
+    this.lastViewed.unshift(show);
+
+    localStorage.setItem('lastViewed', JSON.stringify(this.lastViewed))
   }
 
 }

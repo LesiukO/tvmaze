@@ -9,6 +9,11 @@ import { TvmazeApiService } from '../tvmaze-api.service';
 export class MainPageComponent implements OnInit {
 
   shows$ = [];
+  lastViewed = [];
+  schedule$ = [];
+
+  currentDate;
+  isoDate;
 
   constructor(
     private tvmazeApiService: TvmazeApiService,
@@ -16,6 +21,9 @@ export class MainPageComponent implements OnInit {
 
   ngOnInit(): void {
     this.getShows();
+    this.getCurrentDate();
+    this.getCurrentSchedule();
+    this.getLastViewed();
   }
 
   getShows() {
@@ -28,7 +36,24 @@ export class MainPageComponent implements OnInit {
   }
 
   getCurrentSchedule() {
-    // this.getCurrentScheduleService
+    this.tvmazeApiService.getCurrentSchedule(this.isoDate.slice(0, 10)).subscribe( (data) => {
+      this.schedule$ = data;
+      console.log(this.schedule$);
+    });
+  }
+
+  getCurrentDate() {
+    this.isoDate = new Date().toISOString();
+    this.currentDate = new Date();
+    console.log(this.currentDate);
+  }
+
+  getLastViewed() {
+    if (localStorage.getItem('lastViewed') === null) {
+      this.lastViewed = [];
+    } else {
+      this.lastViewed = JSON.parse(localStorage.getItem('lastViewed'))
+    }
   }
 
 }
