@@ -1,12 +1,12 @@
 .search {
   display: flex;
 
-  width: 700px;
+  width: 550px;
 
   &__input {
     display: inline-block;
     width: 80%;
-    height: 30px;
+    height: 20px;
     padding: 10px 15px;
 
     border-top-left-radius: 25px;
@@ -19,7 +19,7 @@
 
   &__button {
     display: inline-block;
-    height: 30px;
+    height: 20px;
     padding: 10px 15px;
     width: 20%;
 
@@ -28,8 +28,9 @@
     border-top-right-radius: 25px;
     border-bottom-right-radius: 25px;
 
-    text-align: center;
-    vertical-align: middle;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     cursor: pointer;
   }

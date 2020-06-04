@@ -1,13 +1,13 @@
 import { TestBed } from '@angular/core/testing';
 
-import { GetShowsService } from './get-shows.service';
+import { TvmazeApiService } from './tvmaze-api.service';
 
-describe('GetShowsService', () => {
-  let service: GetShowsService;
+describe('TvmazeApiService', () => {
+  let service: TvmazeApiService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(GetShowsService);
+    service = TestBed.inject(TvmazeApiService);
   });
 
   it('should be created', () => {

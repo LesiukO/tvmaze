@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { GetSingleShowService } from '../get-single-show.service';
 import { ActivatedRoute, Params } from '@angular/router';
+import { TvmazeApiService } from '../tvmaze-api.service';
 
 @Component({
   selector: 'app-show',
@@ -12,13 +12,13 @@ export class ShowComponent implements OnInit {
   show;
 
   constructor(
-    private getSingleShowService: GetSingleShowService,
+    private tvmazeApiService: TvmazeApiService,
     private route: ActivatedRoute
   ) { }
 
   ngOnInit(): void {
     this.route.params.subscribe((params: Params) => {
-      this.getSingleShowService.getShowByTvrage(params.tvrage).subscribe( (show) => {
+      this.tvmazeApiService.getShowByTvrage(params.tvrage).subscribe( (show) => {
         this.show = show;
         console.log(this.show);
 
@@ -27,7 +27,7 @@ export class ShowComponent implements OnInit {
   }
 
   getShow(tvrage) {
-    this.getSingleShowService.getShowByTvrage(tvrage).subscribe( (show) => {
+    this.tvmazeApiService.getShowByTvrage(tvrage).subscribe( (show) => {
       this.show = show;
       console.log(this.show);
     });

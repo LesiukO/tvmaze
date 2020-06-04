@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { GetShowsService } from '../get-shows.service';
+import { TvmazeApiService } from '../tvmaze-api.service';
 
 @Component({
   selector: 'app-main-page',
@@ -11,7 +11,7 @@ export class MainPageComponent implements OnInit {
   shows$ = [];
 
   constructor(
-    private getShowsService: GetShowsService
+    private tvmazeApiService: TvmazeApiService,
   ) { }
 
   ngOnInit(): void {
@@ -19,13 +19,17 @@ export class MainPageComponent implements OnInit {
   }
 
   getShows() {
-    this.getShowsService.getShows()
+    this.tvmazeApiService.getShows()
       .subscribe( (shows) => {
         this.shows$ = shows.sort( (showA, showB) => {
           return showB.rating.average - showA.rating.average;
         });
         console.log(this.shows$);
       });
+  }
+
+  getCurrentSchedule() {
+    // this.getCurrentScheduleService
   }
 
 }
