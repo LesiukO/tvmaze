@@ -24,7 +24,6 @@ export class MainPageComponent implements OnInit {
         this.shows$ = shows.sort( (showA, showB) => {
           return showB.rating.average - showA.rating.average;
         });
-        console.log(this.shows$);
       });
   }
 

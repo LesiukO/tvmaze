@@ -12,7 +12,7 @@ export class TvmazeApiService {
   constructor(private http: HttpClient) { }
 
   getShowByTvrage(tvrage): Observable<any> {
-    return this.http.get(`${this.baseUrl}/lookup/shows?tvrage=${tvrage}`);
+    return this.http.get(`${this.baseUrl}/lookup/shows?tvrage=${tvrage}/`);
   }
 
   getShows(): Observable<any> {
