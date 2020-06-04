@@ -99,6 +99,8 @@
   &__title {
     font-size: 16px;
     cursor: pointer;
+    color: inherit;
+    text-decoration: underline;
   }
 
   &:nth-child(odd) {
