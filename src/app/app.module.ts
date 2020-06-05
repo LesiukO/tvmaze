@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { HeaderComponent } from './header/header.component';
 import { SearchComponent } from './search/search.component';
@@ -16,6 +17,7 @@ import {MatCardModule} from '@angular/material/card';
 import { ShowComponent } from './show/show.component';
 import { LoginComponent } from './login/login.component';
 import { FooterComponent } from './footer/footer.component';
+import { SearchPageComponent } from './search-page/search-page.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +27,8 @@ import { FooterComponent } from './footer/footer.component';
     MainPageComponent,
     ShowComponent,
     LoginComponent,
-    FooterComponent
+    FooterComponent,
+    SearchPageComponent
   ],
   imports: [
     BrowserModule,
@@ -33,7 +36,8 @@ import { FooterComponent } from './footer/footer.component';
     BrowserAnimationsModule,
     MatIconModule,
     HttpClientModule,
-    MatCardModule
+    MatCardModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

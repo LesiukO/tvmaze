@@ -20,8 +20,11 @@ export class TvmazeApiService {
   }
 
   getCurrentSchedule(currentDate): Observable<any> {
-    // return this.http.get(`${this.baseUrl}/schedule?country=US&date=2020-06-04`);
-    // return this.http.get(`${this.baseUrl}/schedule?country=US&date=2020-06-04T11:47:43.043Z`);
     return this.http.get(`${this.baseUrl}/schedule?country=US&date=${currentDate}`);
   }
+
+  searchShows(searchValue): Observable<any> {
+    return this.http.get(`${this.baseUrl}/search/shows?q=${searchValue}`);
+  }
+
 }

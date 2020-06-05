@@ -19,14 +19,17 @@
 
   &__button {
     display: inline-block;
-    height: 20px;
-    padding: 10px 15px;
+    height: 40px;
+    // padding: 10px 15px;
     width: 20%;
 
     background-color: #3C948B;
 
     border-top-right-radius: 25px;
     border-bottom-right-radius: 25px;
+
+    border: none;
+    outline: 0;
 
     display: flex;
     justify-content: center;

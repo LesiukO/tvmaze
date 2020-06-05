@@ -1,7 +1,7 @@
-<form class="search">
-  <input placeholder="Search for Shows and People" type="text" class="search__input">
+<form class="search" [formGroup]="form" (ngSubmit)="submit()">
+  <input placeholder="Search for Shows and People" type="text" class="search__input" formControlName="searchValue">
 
-  <a class="search__button">
+  <button class="search__button">
     <mat-icon aria-hidden="false" class="search__icon" aria-label="icon">search</mat-icon>
-  </a>
+  </button>
 </form>

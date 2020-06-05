@@ -1,0 +1,15 @@
+<div class="container">
+  <div class="search">
+    <h2 class="title">Search</h2>
+    <mat-card class="search__item" *ngFor="let item of shows">
+      <img src="{{ item.show.image.medium }}" alt="search-img" class="search__img">
+      <div class="search__info">
+        <a routerLink="/show/{{ item.show.externals.tvrage }}" class="search__name">{{ item.show.name }}</a>
+        <p class="search__stars">
+          <strong>Starring: </strong>
+          <span>Lee Boo Young</span>
+        </p>
+      </div>
+    </mat-card>
+  </div>
+</div>

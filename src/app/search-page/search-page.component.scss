@@ -1,0 +1,31 @@
+.search {
+
+  &__item {
+    margin-bottom: 20px;
+    display: flex;
+  }
+
+  &__img {
+    margin-right: 20px;
+    max-height: 200px;
+  }
+
+  &__name {
+    font-size: 20px;
+    color: #3C948B;
+    display: inline-block;
+    margin-bottom: 30px;
+  }
+
+  &__info {
+
+  }
+
+  &__stars {
+    background-color: #e4e4e4;
+    padding: 20px;
+    border-radius: 5px;
+  }
+
+
+}
