@@ -1,5 +1,5 @@
 <div class="container">
-  <div class="search">
+  <div class="search" *ngIf="shows[0]; else noResults">
     <h2 class="title">Search</h2>
     <div *ngFor="let item of shows">
       <mat-card class="search__item" *ngIf="item.show.image.medium">
@@ -15,3 +15,9 @@
     </div>
   </div>
 </div>
+
+<ng-template #noResults>
+  <div class="container">
+    <p>No Results</p>
+  </div>
+</ng-template>
