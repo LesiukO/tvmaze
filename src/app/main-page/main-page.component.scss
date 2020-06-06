@@ -15,21 +15,16 @@
   }
 }
 
-.schedules {
-  // width: 35%;
-}
-
 .popular {
-
   &__cards {
     display: flex;
     justify-content: space-between;
-
-    margin: 20px 0;
+    flex-wrap: wrap;
   }
 
   &__card {
     width: 19.8%;
+    margin-bottom: 5px;
   }
 }
 

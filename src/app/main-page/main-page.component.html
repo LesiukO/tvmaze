@@ -6,7 +6,7 @@
         <h2 class="popular__title title">Popular shows airing tonight</h2>
         <div class="popular__cards">
 
-          <div class="popular__card card" *ngFor="let show of shows$ | slice:0:5; let i=index">
+          <div class="popular__card card" *ngFor="let show of shows$ | slice:0:quantity; let i=index">
             <div class="card__img">
               <img src="{{ show.image.medium }}" alt="show img">
           </div>
@@ -17,7 +17,7 @@
           </div>
 
         </div>
-        <a class="btn-more">More shows >></a>
+        <a class="btn-more" (click)="showMore()" >{{ quantity === 5 ? 'Show more >>' : 'Show less >>' }}</a>
       </div>
 
       <div class="popular" *ngIf="lastViewed[0]">
@@ -35,7 +35,6 @@
           </div>
 
         </div>
-        <a class="btn-more">More shows >></a>
       </div>
 
     </div>
@@ -43,7 +42,6 @@
     <div class="main-page__schedule schedule" >
       <h2 class="title">Schedule for {{ currentDate | date:'mediumDate' }}</h2>
       <div class="schedule-on-hour">
-        <!-- <p class="hour">20:00</p> -->
         <ul class="chanels">
           <li class="chanel" *ngFor="let item of schedule$ | slice:0:15">
             <div class="chanel__left">
@@ -54,8 +52,6 @@
               <a routerLink="/show/{{ item.show.externals.tvrage }}" class="chanel__title">{{ item.show.name }}</a>
             </div>
           </li>
-          <!-- <li class="chanel">2</li>
-          <li class="chanel">2</li> -->
         </ul>
       </div>
     </div>

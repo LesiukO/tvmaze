@@ -12,8 +12,6 @@ export class ShowComponent implements OnInit {
   show;
   lastViewed;
 
-
-
   constructor(
     private tvmazeApiService: TvmazeApiService,
     private route: ActivatedRoute
@@ -36,7 +34,7 @@ export class ShowComponent implements OnInit {
     if (localStorage.getItem('lastViewed') === null) {
       this.lastViewed = [];
     } else {
-      this.lastViewed = JSON.parse(localStorage.getItem('lastViewed'))
+      this.lastViewed = JSON.parse(localStorage.getItem('lastViewed'));
     }
   }
 
@@ -46,9 +44,7 @@ export class ShowComponent implements OnInit {
         this.lastViewed.splice(index, 1)
       }
     });
-
     this.lastViewed.unshift(show);
-
     localStorage.setItem('lastViewed', JSON.stringify(this.lastViewed))
   }
 

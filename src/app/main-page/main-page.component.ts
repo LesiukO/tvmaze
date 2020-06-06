@@ -15,6 +15,8 @@ export class MainPageComponent implements OnInit {
   currentDate;
   isoDate;
 
+  quantity = 5;
+
   constructor(
     private tvmazeApiService: TvmazeApiService,
   ) { }
@@ -53,6 +55,14 @@ export class MainPageComponent implements OnInit {
       this.lastViewed = [];
     } else {
       this.lastViewed = JSON.parse(localStorage.getItem('lastViewed'))
+    }
+  }
+
+  showMore() {
+    if (this.quantity === 5) {
+      this.quantity = 15;
+    } else {
+      this.quantity = 5;
     }
   }
 
