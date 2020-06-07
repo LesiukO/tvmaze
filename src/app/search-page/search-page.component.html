@@ -2,8 +2,8 @@
   <div class="search" *ngIf="shows[0]; else noResults">
     <h2 class="title">Search</h2>
     <div *ngFor="let item of shows">
-      <mat-card class="search__item" *ngIf="item.show.image.medium">
-        <img src="{{ item.show.image.medium }}" alt="search-img" class="search__img">
+      <mat-card class="search__item" *ngIf="item.show.image && item.show.image.medium">
+        <img src="{{ item.show.image.medium }}" alt="search-img" class="search__img" *ngIf="item.show.image && item.show.image.medium">
         <div class="search__info">
           <a routerLink="/show/{{ item.show.externals.tvrage }}" class="search__name">{{ item.show.name }}</a>
           <p class="search__stars">
