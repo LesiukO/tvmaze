@@ -27,4 +27,10 @@
   &__login {
     margin-right: 20px;
   }
+
+  &__login,
+  &__register {
+    color: inherit;
+    text-decoration: none;
+  }
 }

@@ -14,7 +14,8 @@ export class ShowComponent implements OnInit {
 
   constructor(
     private tvmazeApiService: TvmazeApiService,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+
   ) { }
 
   ngOnInit(): void {

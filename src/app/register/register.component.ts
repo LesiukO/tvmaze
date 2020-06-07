@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 
 @Component({
-  selector: 'app-login',
-  templateUrl: './login.component.html',
-  styleUrls: ['./login.component.scss']
+  selector: 'app-register',
+  templateUrl: './register.component.html',
+  styleUrls: ['./register.component.scss']
 })
-export class LoginComponent implements OnInit {
+export class RegisterComponent implements OnInit {
 
   form: FormGroup;
 
@@ -17,10 +17,6 @@ export class LoginComponent implements OnInit {
         email: new FormControl(null, [
           Validators.required,
           Validators.minLength(3)
-        ]),
-        password: new FormControl(null, [
-          Validators.required,
-          Validators.minLength(6)
         ])
       }
     );

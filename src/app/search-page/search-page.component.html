@@ -7,8 +7,8 @@
         <div class="search__info">
           <a routerLink="/show/{{ item.show.externals.tvrage }}" class="search__name">{{ item.show.name }}</a>
           <p class="search__stars">
-            <strong>Starring: </strong>
-            <span>Lee Boo Young</span>
+            <strong>{{ item.show.schedule.days[0] }}</strong>
+            <span *ngIf="item.show.schedule.time" >at {{ item.show.schedule.time }}</span>
           </p>
         </div>
       </mat-card>

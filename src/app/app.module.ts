@@ -13,11 +13,16 @@ import { MainPageComponent } from './main-page/main-page.component';
 
 import {MatIconModule} from '@angular/material/icon';
 import {MatCardModule} from '@angular/material/card';
+import {MatInputModule} from '@angular/material/input';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatButtonModule} from '@angular/material/button';
 
 import { ShowComponent } from './show/show.component';
 import { LoginComponent } from './login/login.component';
 import { FooterComponent } from './footer/footer.component';
 import { SearchPageComponent } from './search-page/search-page.component';
+import { ShowNotFoundComponent } from './show-not-found/show-not-found.component';
+import { RegisterComponent } from './register/register.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +33,9 @@ import { SearchPageComponent } from './search-page/search-page.component';
     ShowComponent,
     LoginComponent,
     FooterComponent,
-    SearchPageComponent
+    SearchPageComponent,
+    ShowNotFoundComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
@@ -37,7 +44,10 @@ import { SearchPageComponent } from './search-page/search-page.component';
     MatIconModule,
     HttpClientModule,
     MatCardModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatInputModule,
+    MatFormFieldModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

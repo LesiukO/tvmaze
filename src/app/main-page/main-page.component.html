@@ -49,7 +49,8 @@
               <div class="chanel__name">{{ item.show.genres[0] }}</div>
             </div>
             <div class="chanel__right">
-              <a routerLink="/show/{{ item.show.externals.tvrage }}" class="chanel__title">{{ item.show.name }}</a>
+              <a routerLink="/show/{{ item.show.externals.tvrage }}" class="chanel__title" *ngIf="item.show.externals.tvrage">{{ item.show.name }}</a>
+              <a routerLink="/show-not-found" class="chanel__title" *ngIf="!item.show.externals.tvrage">{{ item.show.name }}</a>
             </div>
           </li>
         </ul>
