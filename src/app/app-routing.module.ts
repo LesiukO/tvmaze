@@ -11,7 +11,8 @@ import { RegisterComponent } from './register/register.component';
 const routes: Routes = [
   {path: '', redirectTo: '/main-page', pathMatch: 'full'},
   {path: 'main-page', component: MainPageComponent},
-  {path: 'show/:tvrage', component: ShowComponent},
+  {path: 'show/:imdb', component: ShowComponent},
+  // {path: 'show/:tvrage', component: ShowComponent},
   {path: 'show-not-found', component: ShowNotFoundComponent},
   {path: 'search', component: SearchPageComponent},
   {path: 'login', component: LoginComponent},

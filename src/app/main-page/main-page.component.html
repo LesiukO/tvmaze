@@ -11,7 +11,7 @@
               <img src="{{ show.image.medium }}" alt="show img">
           </div>
             <div class="card__info">
-              <a routerLink="/show/{{ show.externals.tvrage }}" class="card__title">{{ show.name }}</a>
+              <a routerLink="/show/{{ show.externals.imdb }}" class="card__title">{{ show.name }}</a>
               <p class="card__description">{{ show.genres[0] }}</p>
             </div>
           </div>
@@ -29,7 +29,7 @@
               <img src="{{ show.image.medium }}" alt="show img">
           </div>
             <div class="card__info">
-              <a routerLink="/show/{{ show.externals.tvrage }}" class="card__title">{{ show.name }}</a>
+              <a routerLink="/show/{{ show.externals.imdb }}" class="card__title">{{ show.name }}</a>
               <p class="card__description">{{ show.genres[0] }}</p>
             </div>
           </div>
@@ -49,8 +49,8 @@
               <div class="chanel__name">{{ item.show.genres[0] }}</div>
             </div>
             <div class="chanel__right">
-              <a routerLink="/show/{{ item.show.externals.tvrage }}" class="chanel__title" *ngIf="item.show.externals.tvrage">{{ item.show.name }}</a>
-              <a routerLink="/show-not-found" class="chanel__title" *ngIf="!item.show.externals.tvrage">{{ item.show.name }}</a>
+              <a routerLink="/show/{{ item.show.externals.imdb }}" class="chanel__title" *ngIf="item.show.externals.imdb">{{ item.show.name }}</a>
+              <a routerLink="/show-not-found" class="chanel__title" *ngIf="!item.show.externals.imdb">{{ item.show.name }}</a>
             </div>
           </li>
         </ul>

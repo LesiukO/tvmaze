@@ -20,7 +20,7 @@ export class ShowComponent implements OnInit {
 
   ngOnInit(): void {
     this.route.params.subscribe((params: Params) => {
-      this.tvmazeApiService.getShowByTvrage(params.tvrage).subscribe( (show) => {
+      this.tvmazeApiService.getShowByImdb(params.imdb).subscribe( (show) => {
         this.show = show;
 
         // save to local storage

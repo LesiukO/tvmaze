@@ -15,8 +15,13 @@ export class TvmazeApiService {
     private router: Router
     ) { }
 
-  getShowByTvrage(tvrage): Observable<any> {
-      return this.http.get(`${this.baseUrl}/lookup/shows?tvrage=${tvrage}/`);
+  // getShowByTvrage(tvrage): Observable<any> {
+  //     return this.http.get(`${this.baseUrl}/lookup/shows?imdb=${tvrage}`);
+  //     // return this.http.get(`${this.baseUrl}/lookup/shows?tvrage=${tvrage}/`);
+  // }
+  getShowByImdb(imdb): Observable<any> {
+      return this.http.get(`${this.baseUrl}/lookup/shows?imdb=${imdb}`);
+      // return this.http.get(`${this.baseUrl}/lookup/shows?tvrage=${tvrage}/`);
   }
 
   getShows(): Observable<any> {
